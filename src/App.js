@@ -3,6 +3,7 @@ import { observer } from 'mobx-react-lite'
 import { extendObservable, observable } from 'mobx'
 import StateTree from './StateTree'
 import { LogMessages } from './LogMessages'
+import * as R from 'ramda'
 
 const state = observable.object(
   {
@@ -21,7 +22,11 @@ const logStore = (() => {
     { name: 'LogStore' },
   )
 
-  return extendObservable(store, {})
+  return extendObservable(store, {
+    get isEmpty() {
+      return R.isEmpty(store.messages)
+    },
+  })
 })()
 
 const App = observer(() => {
