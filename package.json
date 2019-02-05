@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-scripts": "2.1.3"
+    "mobx": "^5.9.0",
+    "mobx-react-lite": "^0.3.7",
+    "ramda": "^0.26.1",
+    "react": "^16.8.0-alpha.1",
+    "react-dom": "^16.8.0-alpha.1",
+    "react-scripts": "2.1.3",
+    "tachyons": "^4.11.1"
   },
   "scripts": {
     "start": "react-scripts start",
