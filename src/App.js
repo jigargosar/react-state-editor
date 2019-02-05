@@ -3,7 +3,11 @@ import { observer } from 'mobx-react-lite'
 import { observable } from 'mobx'
 import StateTree from './StateTree'
 
-const state = observable.object({ appName: 'State Editor' })
+const state = observable.object({
+  appName: 'State Editor',
+  a: 1,
+  b: false,
+})
 
 const App = observer(() => {
   return (
